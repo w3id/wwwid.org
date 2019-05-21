@@ -1,0 +1,15 @@
+baseURL = "https://wwwid.org/"
+languageCode = "en-ID"
+title = "Modern Web Community Indonesia"
+theme = "hugo-paper"
+defaultContentLanguage="id"
+enableRobotsTXT=true
+
+[params]
+    dateFormat="2 Jan 2006"
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = [":git", "lastmod", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+expiryDate = ["expiryDate"]
