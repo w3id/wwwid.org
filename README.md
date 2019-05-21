@@ -1,2 +1,2 @@
-# w3id.github.io
-Website for wwwid.org
+# wwwid.org
+Repo for wwwid.org website
