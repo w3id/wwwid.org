@@ -4,7 +4,11 @@ go:
   - master # This uses automatically the latest version of go
 
 install:
-  - go get github.com/gohugoio/hugo # This provides the latest version of Hugo to Travis CI
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.55.6/hugo_0.55.6_Linux-64bit.tar.gz
+  - tar -xzvf hugo_0.55.6_Linux-64bit.tar.gz
+  - chmod +x hugo
+  - export PATH=$PATH:$PWD
+  - hugo version
 
 script:
   - hugo # This commands builds your website on travis
