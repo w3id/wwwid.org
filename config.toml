@@ -7,9 +7,3 @@ enableRobotsTXT=true
 
 [params]
     dateFormat="2 Jan 2006"
-
-[frontmatter]
-date = ["date", "publishDate", "lastmod"]
-lastmod = [":git", "lastmod", "date", "publishDate"]
-publishDate = ["publishDate", "date"]
-expiryDate = ["expiryDate"]
