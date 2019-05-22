@@ -1,7 +1,6 @@
 ---
 title: "Tentang Kami"
 date: 2019-05-22T10:09:50+07:00
-draft: true
 type: "page"
 menu: "main"
 ---
