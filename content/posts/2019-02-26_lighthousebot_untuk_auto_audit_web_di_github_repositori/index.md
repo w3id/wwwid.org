@@ -8,21 +8,26 @@ description: ""
 
 subtitle: "Madge merupakan Applikasi pengembang yang menghasilkan Grafik Visual mengenai struktur sebuah applikasi, modul-modul yang digunakan…"
 tags:
- - JavaScript 
- - Architecture 
- - Software Development 
- - Dependencies 
- - Tools 
+ - JavaScript
+ - Lighthouse
+ - WebPerformance
+ - WebAccessibility
+ - WebTest
+ - WebAudit
+ - w3id
 
-image: "/posts/2019-02-01_visualisasi-arsitektur-aplikasi-dengan-madge/images/1.png" 
+image: "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/1.png" 
 images:
- - "/posts/2019-02-01_visualisasi-arsitektur-aplikasi-dengan-madge/images/1.png" 
- - "/posts/2019-02-01_visualisasi-arsitektur-aplikasi-dengan-madge/images/2.png" 
-
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/1.png" 
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/2.png"
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/3.png"
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/4.png"
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/5.png"
 
 aliases:
-    - "/visualisasi-arsitektur-applikasi-dengan-madge-ea5da2f5b9ce"
+    - "/lighthousebot-untuk-auto-audit-web-b6058984a6c6"
 ---
+![image](/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/1.png)
 LighthouseBOT — merupakan sebuah akun “bot” yang bekerja untuk “Audit Web” dengan menggunakan Lighthouse dan melaporkan hasil audit tersebut pada repositori kita di Github. Dengan menggunakan LighthouseBOT maka kita tidak perlu lagi untuk melakukan audit secara manual dengan menggunakan https://web.dev, Lighthouse pada Chrome DevTools, Lighthouse Extension pada browser, Lighthouse-cli, & cara-cara lain yang menggunakan Lighthouse.
 
 Hal — hal yang bisa dilakukan LighthouseBOT hanyalah menampilkan laporan mengenai Performance, Accessibility, SEO, & Best Practices.
@@ -54,6 +59,7 @@ Setelah ditambah, status `LighthouseBOT` default-nya pending atau menunggu sampa
 ### Menambahkan Script dan Konfigurasi Travis untuk Lighthouse CI
 Jika `LIGHTHOUSE_API_KEY` telah didapatkan melalui email yang kamu gunakan pada saat proses pengajuan maka yang kamu perlukan adalah menambahkan `LIGHTHOUSE_API_KEY` pada `Travis-ci` yang sudah integrasi dengan repositori di Github.
 
+![image](/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/3.png)
 
 Jika telah mendapatkan Environment Variable, silahkan tambahkan package `LighthouseBot` pada project kamu.
 
@@ -81,9 +87,11 @@ after_success:
   
 Jika menggunakan opsi seperti contoh perfomance budgeting, artinya kita telah mengatur minimum pencapaian setiap web kita di audit. Jika kurang dari nilai yang sudah di tentukan maka di anggap error atau gagal dalam tes audit.
 
-   
+![image](/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/4.png)
+
 Terakhir, kamu bisa tes dengan mengirimkan `commit` atau `pull-request` ke repository kamu.
 
+![image](/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/5.png)
     
 Log Travis dan data tersebut akan di gunakan oleh LighthouseBOT sebagai komentar di Repository Github kamu.
 Kesimpulan
