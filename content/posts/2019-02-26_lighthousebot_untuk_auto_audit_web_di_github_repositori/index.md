@@ -16,13 +16,13 @@ tags:
  - WebAudit
  - w3id
 
-image: "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/1.png" 
+image: "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/1.png" 
 images:
- - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/1.png" 
- - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/2.png"
- - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/3.png"
- - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/4.png"
- - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/5.png"
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/1.png" 
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/2.png"
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/3.png"
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/4.png"
+ - "/posts/2019-02-26_lighthousebot_untuk_auto_audit_web_di_github_repositori/images/5.png"
 
 aliases:
     - "/lighthousebot-untuk-auto-audit-web-b6058984a6c6"
