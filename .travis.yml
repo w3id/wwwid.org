@@ -1,4 +1,5 @@
-language: go
+language: generic
+cache: bundler
 
 go:
   - master # This uses automatically the latest version of go
@@ -10,8 +11,11 @@ install:
   - export PATH=$PATH:$PWD
   - hugo version
 
+before_script:
+  - npm install -g gulp-cli
+  - npm install
 script:
-  - hugo # This commands builds your website on travis
+  - gulp build # This commands builds your website on travis
 
 deploy:
   local_dir: public # Default static site output dir for Hugo
