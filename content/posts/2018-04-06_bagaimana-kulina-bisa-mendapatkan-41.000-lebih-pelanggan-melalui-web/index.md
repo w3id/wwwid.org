@@ -3,7 +3,7 @@ title: "Bagaimana Kulina Bisa Mendapatkan 41.000 Lebih Pelanggan Melalui Web"
 author: "Yohan Totting"
 date: 2018-04-06T06:18:26.109Z
 lastmod: 2019-05-20T16:27:17+07:00
-
+featured: true
 description: ""
 
 subtitle: "Pemilihan platform untuk produk startup merupakan hal krusial karena sumber daya startup yang sangat terbatas. Sehingga pemilihan platform…"

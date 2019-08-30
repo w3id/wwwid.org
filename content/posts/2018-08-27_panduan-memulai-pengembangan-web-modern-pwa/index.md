@@ -3,7 +3,7 @@ title: "Panduan Memulai Pengembangan Web Modern (PWA)"
 author: "Yohan Totting"
 date: 2018-08-27T08:29:02.623Z
 lastmod: 2019-05-20T16:27:37+07:00
-
+featured: true
 description: ""
 
 subtitle: "Panduan ini akan menjadi dasar bagaimana sebuah web modern atau biasa disebut Progressive Web App(PWA) dikembangkan. Karena sebagian besar…"

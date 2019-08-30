@@ -3,7 +3,7 @@ title: "JavaScript, Sosial Media, dan SEO"
 author: "Pradita Utama"
 date: 2018-07-20T19:37:23.169Z
 lastmod: 2019-05-20T16:27:28+07:00
-
+featured: true
 description: ""
 
 subtitle: "Tren membangun website menggunakan framework dan library JavaScript saat ini sedang tinggi-tingginya. Bahkan perkembangan framework dan…"

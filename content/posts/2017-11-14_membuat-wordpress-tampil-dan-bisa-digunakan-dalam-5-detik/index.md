@@ -3,7 +3,7 @@ title: "Membuat WordPress Tampil dan Bisa Digunakan Dalam 5 Detik"
 author: "Yohan Totting"
 date: 2017-11-14T11:34:40.118Z
 lastmod: 2019-05-20T16:26:28+07:00
-
+featured: true;
 description: ""
 
 subtitle: "Web yang modern saat ini mencoba menaikkan standar kecepatan tampil di layar yang rata-rata 19 detik di 3G menjadi 5 detik atau kurang…"

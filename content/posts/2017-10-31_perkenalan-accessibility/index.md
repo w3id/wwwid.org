@@ -3,7 +3,7 @@ title: "Perkenalan Accessibility"
 author: "Satya Kresna Adi Pratama"
 date: 2017-10-31T00:11:45.428Z
 lastmod: 2019-05-20T16:26:27+07:00
-
+featured: true
 description: ""
 
 subtitle: "Sebagai seorang web developer, selain urusan performance dan interface pada website yang dibuat, kita perlu memperhatikan siapa user kita…"

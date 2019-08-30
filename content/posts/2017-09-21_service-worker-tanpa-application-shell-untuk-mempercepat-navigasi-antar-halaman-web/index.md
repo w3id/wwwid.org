@@ -3,7 +3,7 @@ title: "Service Worker Tanpa Application Shell Untuk Mempercepat Navigasi Antar 
 author: "Yohan Totting"
 date: 2017-09-21T04:18:28.766Z
 lastmod: 2019-05-20T16:26:15+07:00
-
+featured: true
 description: ""
 
 subtitle: "Seminggu lalu saya disibukkan oleh 2 Google events yaitu Progressive Web App Road Show Indonesia yang diadakan di 2 kota yaitu Jakarta dan…"

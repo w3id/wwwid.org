@@ -25,8 +25,25 @@
     <link href="{{.Site.BaseURL}}css/github-gist.min.css" rel="stylesheet">
     <link href="{{.Site.BaseURL}}css/style.css" rel="stylesheet">
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{.Site.BaseURL}}img/apple-touch-icon.png">
-    <link rel="icon" href="{{.Site.BaseURL}}img/favicon.ico">
+    <link rel="apple-touch-icon" href="{{.Site.BaseURL}}images/wwwid-logogram.png">
+    <link rel="icon" href="{{.Site.BaseURL}}images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{.Site.BaseURL}}images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{.Site.BaseURL}}images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{.Site.BaseURL}}images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{.Site.BaseURL}}images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{.Site.BaseURL}}images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{.Site.BaseURL}}images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{.Site.BaseURL}}images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{.Site.BaseURL}}images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{.Site.BaseURL}}images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{.Site.BaseURL}}images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{.Site.BaseURL}}images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{.Site.BaseURL}}images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{.Site.BaseURL}}images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{.Site.BaseURL}}images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!-- Generator -->
     {{ hugo.Generator }}
     <!-- RSS -->
@@ -48,6 +65,11 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-MXRJCWB');</script>
       <!-- End Google Tag Manager -->
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+      {{if eq .Kind `page` }}
+      <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+      {{end}}
   </head>
   <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">
     <header class="header">

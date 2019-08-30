@@ -1,5 +1,39 @@
 {{ partial "header.html" . }}
-
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "{{ .Permalink }}",
+  "headline": "{{ .Title }}",
+  "datePublished": "{{ .Date.Format ("2016-04-21T11:55:02Z" | default "2006.1.2") }}",
+  "dateModified": "{{ .Date.Format ("2016-04-21T11:55:02Z" | default "2006.1.2") }}",
+  "description": "{{ .Summary | plainify | htmlUnescape }}",
+  {{- if or .Params.author .Site.Params.author -}}
+  "author": {
+    "@type": "Person",
+    "name": "{{.Params.author | default .Site.Params.author }}"
+  },
+  {{ end }}
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "WWWID",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{.Site.BaseURL}}/images/wwwid-logogram.png",
+      "width": 388,
+      "height": 388
+    }
+  },
+  {{ if .Params.image }}
+  "image": {
+    "@type": "ImageObject",
+    "url": "{.Params.image}}"
+  }
+   {{ end }}
+  
+  }
+  </script>
 <article class="post-single">
   <header class="post-header">
     <h1 class="post-title">{{ .Title }}</h1>
@@ -11,7 +45,22 @@
   </header>
   <div class="post-content">{{ .Content }}</div>
   <footer class="post-footer">
+    <div class="post-share">
+        <amp-social-share type="twitter"
+        width="45"
+        height="33"></amp-social-share>
+      <amp-social-share type="facebook"
+        width="45"
+        height="33"></amp-social-share>
+      <amp-social-share type="email"
+        width="45"
+        height="33"></amp-social-share>
+      <amp-social-share type="pinterest"
+        width="45"
+        height="33"></amp-social-share>
+    </div>
     {{ if .Params.tags }}
+    <p class="section-title">Klik kata kunci di bawah ini untuk melihat konten terkait lebih banyak</p>
     <ul class="post-tags">
       {{ range .Params.tags }}
       <li><a href="{{$.Site.BaseURL}}tags/{{ . | urlize }}/">{{ . }}</a></li>
@@ -40,5 +89,5 @@
   {{ end }}
   {{ end }}
 </article>
-
+{{ partial "related.html" . }}
 {{ partial "footer.html" . }}

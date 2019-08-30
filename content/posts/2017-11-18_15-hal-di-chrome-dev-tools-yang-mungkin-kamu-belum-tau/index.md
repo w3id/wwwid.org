@@ -3,7 +3,7 @@ title: "15 Hal di Chrome Dev Tools yang Mungkin Kamu Belum Tau"
 author: "Putu Alfred Crosby"
 date: 2017-11-18T12:26:11.148Z
 lastmod: 2019-05-20T16:26:32+07:00
-
+featured: true
 description: ""
 
 subtitle: "No 8 bikin netizen geleng-geleng kepala."

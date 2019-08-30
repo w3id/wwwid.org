@@ -4,6 +4,6 @@ title = "Modern Web Community Indonesia"
 theme = "hugo-paper"
 defaultContentLanguage="id"
 enableRobotsTXT=true
-
+enableGitInfo=true
 [params]
     dateFormat="2 Jan 2006"

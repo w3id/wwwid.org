@@ -1,0 +1,19 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<h3 class="section-title">Related Contents</h3>
+<amp-carousel class="featured-block" height="200"
+  layout="fixed-height"
+  type="carousel">
+  {{ range .}}
+  <div class="featured-post">
+        <a class="entry-link" href="{{ .Permalink }}">
+        {{ if .Params.image }}
+            <img src="{{.Params.image}}" alt="featured image">
+            <div class="overlay"></div>
+        {{ end }}
+        <h4>{{ .Title }}</h4>
+        </a>
+        </div>
+    {{ end }}
+</amp-carousel>
+{{ end }}

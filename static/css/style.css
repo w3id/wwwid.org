@@ -246,7 +246,7 @@ img {
   overflow: hidden;
 }
 .first-entry .entry-header h2 {
-  font-size: 40px;
+  font-size: 32px;
 }
 .first-entry .entry-content {
   /* max-height: 81px; */
@@ -500,11 +500,15 @@ img {
 .post-footer {
   margin-top: 48px;
 }
+.post-share{
+  margin-bottom:1rem;
+}
 .post-tags li {
   display: inline-block;
 }
 .post-tags li + li {
   margin-left: 3px;
+  margin-bottom: 1rem;
 }
 .post-tags a {
   display: block;
@@ -562,4 +566,42 @@ img {
 -------------------------------------------------- */
 #instantclick-bar {
   background: linear-gradient(120deg, #7492e6, #8f72c3, #9c66b3, #ba4d95, #ba4d95, #dc3c75);
+}
+
+.section-title{
+  margin:1rem 0;
+  color: #888888;
+}
+.featured-block{
+  margin-bottom: 2rem;
+}
+.featured-block,.featured-post{
+  height: 200px;
+}
+
+.featured-post{
+  width: 200px;
+  position: relative;
+}
+.featured-post img{
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
+.featured-post .overlay{
+  background: linear-gradient(transparent, black);
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.featured-post h4{
+  position: absolute;
+  bottom: 1rem;
+  left:1rem;
+  right:1rem;
+  font-size: 0.9rem;
+  color:#FFF;
+  white-space: pre-wrap;
 }
