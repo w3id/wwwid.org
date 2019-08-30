@@ -5,8 +5,8 @@
   "@type": "NewsArticle",
   "mainEntityOfPage": "{{ .Permalink }}",
   "headline": "{{ .Title }}",
-  "datePublished": "{{ .Date.Format ("2016-04-21T11:55:02Z" | default "2006.1.2") }}",
-  "dateModified": "{{ .Date.Format ("2016-04-21T11:55:02Z" | default "2006.1.2") }}",
+  "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
   "description": "{{ .Summary | plainify | htmlUnescape }}",
   {{- if or .Params.author .Site.Params.author -}}
   "author": {
@@ -28,7 +28,7 @@
   {{ if .Params.image }}
   "image": {
     "@type": "ImageObject",
-    "url": "{.Params.image}}"
+    "url": "{{.Params.image}}"
   }
    {{ end }}
   

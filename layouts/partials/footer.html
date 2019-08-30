@@ -6,19 +6,11 @@
   <span>&middot;</span>
   <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
 </footer>
-<script src="{{.Site.BaseURL}}js/instantclick.min.js" data-no-instant></script>
-<script data-no-instant>InstantClick.init();</script>
+
 <script src="{{.Site.BaseURL}}js/highlight.min.js" data-no-instant></script>
 <script data-no-instant>
   hljs.initHighlightingOnLoad();
   setMenuListener();
-
-  InstantClick.on('change', function() {
-    document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightBlock(block);
-    });
-    setMenuListener();
-  });
 
   function setMenuListener() {
     var menuToggle = document.querySelector('.menu-toggle');
