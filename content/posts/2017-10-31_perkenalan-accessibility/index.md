@@ -27,18 +27,27 @@ aliases:
 
 
 
-Sebagai seorang web developer, selain urusan performance dan interface pada website yang dibuat, kita perlu memperhatikan siapa user kita. Apakah user kita lahir tidak ada kekurangan fisik atau sebaliknya (disabilitas). Jika user yang mengakses website kita adalah kalangan disabiilitas maka kita perlu memberikan perhatian ekstra terhadap website kita. Lalu bagaimana caranya? Accessibility adalah jawaban dari hal tersebut.### **Definisi**
+Sebagai seorang web developer, selain urusan performance dan interface pada website yang dibuat, kita perlu memperhatikan siapa user kita. Apakah user kita lahir tidak ada kekurangan fisik atau sebaliknya (disabilitas). Jika user yang mengakses website kita adalah kalangan disabiilitas maka kita perlu memberikan perhatian ekstra terhadap website kita. Lalu bagaimana caranya? Accessibility adalah jawaban dari hal tersebut.
+
+## **Definisi**
 
 Accessibility secara garis besar adalah bagaimana user yang disabilitas bisa mengakses aplikasi kita layaknya orang normal (_making disability users able to access our website_). Accessibility sering disingkat dengan a11y layaknya localization (l10n) dan intenationalization (i18n). Dengan bantuan teknologi pembantu (assitive technology) seperti screen reader dan mengubah website kita ke arah a11y maka orang disabilitas bisa mengakses website kita layaknya orang normal.
-> Perlu dipahami bahwa a11y bukanlah sebuah fitur tetapi sebuah kebutuhan bahkan keharusan (It’s not a feature but a requirement even must)### **Tools untuk Accessibility**
 
-Saya akan menggunakan Lighthouse yang ada pada Chrome browser untuk menganalisa apakah website kita sudah bisa dikatakan Accessibility. Kita akan bahas dipertemuan selanjutnya.### **Panduan mempelajari Accessibility**
+> Perlu dipahami bahwa a11y bukanlah sebuah fitur tetapi sebuah kebutuhan bahkan keharusan (It’s not a feature but a requirement even must)
+
+## **Tools untuk Accessibility**
+
+Saya akan menggunakan Lighthouse yang ada pada Chrome browser untuk menganalisa apakah website kita sudah bisa dikatakan Accessibility. Kita akan bahas dipertemuan selanjutnya.
+
+## **Panduan mempelajari Accessibility**
 
 1. [WebAIM WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist).
 
 2. [Web Content Accessibility Guidelines](https://www.w3.org/WAI/WCAG20/quickref/).
 
-3. [Udacity — Web Accessibility](https://classroom.udacity.com/courses/ud891).### **Kriteria Accessibility**
+3. [Udacity — Web Accessibility](https://classroom.udacity.com/courses/ud891).
+
+## **Kriteria Accessibility**
 
 1. **Perceivable** (Konten website tersedia bagi indera — penglihatan, pendengaran dan atau sentuhan).
 
@@ -48,7 +57,9 @@ Saya akan menggunakan Lighthouse yang ada pada Chrome browser untuk menganalisa 
 
 4. **Robust** (Konten dapat digunakan dengan baik oleh berbagai platform termasuk teknologi bantu).
 
-Kita sebut dengan _POUR_### **Alasan membuat konten Accessibility dalam bahasa Indonesia**
+Kita sebut dengan _POUR_
+
+## **Alasan membuat konten Accessibility dalam bahasa Indonesia**
 
 1. Merupakan kesempatan bagi saya untuk memperkenalkan konten Accessibility dalam bahasa Indonesia. _Sejauh yang saya lihat di forum komunitas web developer belum ada yang membahas tentang hal ini apalagi dalam konten bahasa Indonesia._ Masih ada beberapa orang yang belum bisa mencerna sebuah materi dengan baik dengan bahasa Inggris maka dari itulah saya membuatkan artikel Accessibility dalam bahasa Indonesia.
 
