@@ -1,0 +1,21 @@
+{{ partial "amp/header.html" . }}
+
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <style amp-custom>
+            
+    </style>
+  </head>
+  <body>
+      <amp-story standalone
+      title="{{ .Title }}"
+      publisher="WWWID"
+      publisher-logo-src="{{.Site.BaseURL}}/images/wwwid-logogram.png"
+      {{ if .Params.image }}
+      poster-portrait-src="{{.Params.image}}"
+      {{ end }}
+      >
+      {{ .Content }}
+  </amp-story>
+  
+
+{{ partial "amp/footer.html" . }}

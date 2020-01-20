@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-author: "{{.GitInfo.AuthorName}}"
+author: ""
 date: {{ .Date }}
 draft: true
 description: ""

@@ -6,38 +6,25 @@
 
 {{ if not .IsHome }}
 <header class="page-header">
-  <h1>
-  {{ if eq .Data.Singular "tag" }}{{ .Data.Term }}{{ else }}Posts{{ end }}
-  </h1>
+  <h1>{{ if eq .Data.Singular "tag" }}{{ .Data.Term }}{{ else }}Posts{{ end }}</h1>
 </header>
 {{ end }}
 
-{{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") }}
+{{ $paginator := .Paginate (where .Site.RegularPages ".Params.type" "!=" "page") }}
 
-{{ if gt $paginator.TotalPages 0 }}
-<h3 class="section-title">Latest</h3>
 {{ range $index, $page := $paginator.Pages }}
 <article class="{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}first-entry{{ else }}post-entry{{ end }}">
   <header class="entry-header">
     <h2>{{ .Title }}</h2>
   </header>
   <section class="entry-content">
-   {{ if .Params.image }}
-    <figure class="featured">
-        <img src="{{.Params.image}}" alt="featured image">
-    </figure>
-   {{ end }}
    <p>{{ .Summary | plainify | htmlUnescape }}...</p>
   </section>
   <footer class="entry-footer">
-    <time>{{ .Date.Format (.Site.Params.dateFormat | default "2006.1.2") }}</time>
-    {{- if or .Params.author .Site.Params.author -}}
-      <div class="author">by {{.Params.author | default .Site.Params.author }}</div> 
-    {{ end }}
+    <time>{{ .Date.Format "January 2, 2006" }}</time>
   </footer>
   <a class="entry-link" href="{{ .Permalink }}"></a>
 </article>
-{{ end }}
 {{ end }}
 
 {{ if gt $paginator.TotalPages 1 }}

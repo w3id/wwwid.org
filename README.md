@@ -13,3 +13,12 @@ Website ini dibuat menggunakan [Hugo Static CMS](https://gohugo.io) jadi silakan
 4. Update sub module `git submodule update --init`
 5. Run as local web server `hugo server -D`
 6. Build `hugo -D`
+
+## Update to Hugo 0.62
+1. Update hugo on your machine
+2. Pull latest commits from this repo
+3. Make sure update the sub modules themes
+```
+git pull --recurse-submodules
+git submodule update --remote --recursive
+```

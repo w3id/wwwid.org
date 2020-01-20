@@ -42,28 +42,40 @@ Untuk bisa optimal di semua perangkat, tentunya kita perlu akses ke spesifikasi 
 
 **Hardware concurrency**  
 [API hardware concurrency](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency) ini untuk mengetahui berapa banyak core CPU yang dimiliki oleh perangkat.
-`const logicalProcessors = window.navigator.hardwareConcurrency`
+```
+const logicalProcessors = window.navigator.hardwareConcurrency
+```
 
 **Device memory**  
 [API device memory](https://developers.google.com/web/updates/2017/12/device-memory) ini untuk mengetahui berapa besar jumlah memori (GiB) atau RAM dari perangkat.
-``const componentVersion = navigator.deviceMemory &lt; 2? &#39;lite&#39; : &#39;full&#39;;``
+
+```
+const componentVersion = navigator.deviceMemory < 2? "lite" : "full";
+```
 
 Dari contoh di atas selanjutnya adalah menggunakan informasi jumlah _core_ CPU atau memori perangkat untuk mengoptimasi konten yang akan ditampilkan. Sebagai contoh:
-`const contentParams= {pageSize:0,showVideo:true,hiresImage:true};  
-if(logicalProcessors &lt; 3 &amp;&amp; componentVersion ===&#39;lite){  
+
+```
+const contentParams= {pageSize:0,showVideo:true,hiresImage:true};  
+if(logicalProcessors < 3 && componentVersion ==="lite){  
   contentParams={pageSize:10,showVideo:false,hiresImage:false};  
-}`
+}
+```
 
 Contoh di atas menggunakan informasi di _cpu cores_ dan _device memory_ untuk menampilkan konten versi _lite_ bila perangkat memiliki core kurang dari 3 cores dan RAM kurang dari 2 GiB. Konten versi _lite_ yang dimaksud adalah video diganti dengan gambar statis di-mana masih bisa diberikan _link_ untuk memutar video, jumlah konten yang ditampilkan hanya 10 atau setengah dari seharusnya, serta hanya menampilkan gambar dengan resolusi rendah.
 
-**Kesimpulan untuk informasi perangkat** Yang perlu diperhatikan dari spesifikasi perangkat adalah kemampuan perangkat untuk memproses JavaScript serta memuat konten seperti gambar dan video. Sehingga bila spesifikasi perangkat cukup rendah sebaiknya ukuran JavaScript yang di-load juga lebih kecil, serta konten media yang ditampilkan sebaiknya tidak beresolusi tinggi atau menggunakan jenis file yang optimal.
+**Kesimpulan untuk informasi perangkat** 
+Yang perlu diperhatikan dari spesifikasi perangkat adalah kemampuan perangkat untuk memproses JavaScript serta memuat konten seperti gambar dan video. Sehingga bila spesifikasi perangkat cukup rendah sebaiknya ukuran JavaScript yang di-load juga lebih kecil, serta konten media yang ditampilkan sebaiknya tidak beresolusi tinggi atau menggunakan jenis file yang optimal.
 
 ### Beradaptasi dengan jaringan
 
 Jaringan bersifat sangat dinamis, berbeda dengan perangkat yang bersifat tetap. Pada jaringan walaupun perangkat terhubung dengan wifi atau koneksi selular 4G, hal ini tidak menjamin kecepatan akses pada perangkat akan selalu cepat. Karena itu diperlukan cara untuk mengetahui kecepatan akses sebenarnya untuk melakukan sesuatu pada aplikasi web yang bergantung pada kondisi jaringan.
 
 **Network Information API** Untuk mengetahui kondisi jaringan pada perangkat maka tersedia [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) yang bisa diakses seperti contoh berikut
-`const networkInformation = navigator.connection`
+
+```
+const networkInformation = navigator.connection
+```
 
 Dan informasi yang dapat diakses dari API tersebut mencakup
 
@@ -95,27 +107,33 @@ Hal ini sudah diadaptasi oleh Instagram [di aplikasi web](https://www.instagram.
 ### Sinkronisasi data hanya di jaringan wifi
 
 Salah satu yang bisa dilakukan juga dengan informasi _type_ adalah untuk keperluan upload atau download file berukuran besar atau sinkronisasi data berukuran besar. Hal ini diperlukan untuk mencegah pengguna kehabisan paket data karena proses sinkronisasi data berukuran besar.
-`if(navigator.connection.type===&#39;wifi&#39;){  
+
+```
+if(navigator.connection.type==="wifi"){  
   //upload data langsung  
   uploadData();  
 } else {  
   //jadwalkan upload nanti pada saat terhubung dengan wifi.  
   scheduleForUploadOnWifi();  
-}`
+}
+```
 
 Sinkronisasi bahkan bisa lebih baik lagi bila menggunakan [_service workers_](https://developers.google.com/web/fundamentals/primers/service-workers/) yang sudah didukung oleh semua _browsers modern_. Pada _service worker_ ada [background sync](https://github.com/WICG/BackgroundSync/blob/master/explainer.md) API yang bisa digunakan untuk melakukan sinkronisasi data ini di background tanpa harus membuka aplikasi web. Dan _background sync_ API ini juga bisa diatur untuk hemat daya dan hanya jalan pada wifi saja.
-`navigator.serviceWorker.ready.then(function(registration) {  
+
+```
+navigator.serviceWorker.ready.then(function(registration) {  
   registration.periodicSync.register({  
-    tag: &#39;get-latest-news&#39;,         // default: &#39;&#39;  
+    tag: "get-latest-news",         // default: ""  
     minPeriod: 12 * 60 * 60 * 1000, // default: 0  
-    powerState: &#39;avoid-draining&#39;,   // default: &#39;auto&#39;  
-    networkState: &#39;avoid-cellular&#39;  // default: &#39;online&#39;  
+    powerState: "avoid-draining",   // default: "auto"  
+    networkState: "avoid-cellular"  // default: "online"  
   }).then(function(periodicSyncReg) {  
     // success  
   }, function() {  
     // failure  
   })  
-});`
+});
+```
 
 ### Kesimpulan
 

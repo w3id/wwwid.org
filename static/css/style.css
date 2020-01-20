@@ -605,3 +605,13 @@ img {
   color:#FFF;
   white-space: pre-wrap;
 }
+.post-content figcaption,.post-content figcaption h4{
+  font-size: small;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.post-content video{
+  width: 100%;
+}
