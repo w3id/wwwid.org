@@ -150,7 +150,7 @@ Atau bila dikombinasikan dengan atribut `srcset` maka kodenya bisa seperti
  Kode di atas akan membantu browser untuk memuat file yang sesuai urutan yang ditentukan dan akan memuat file berikutnya bila file sebelumnya tidak didukung oleh browser. Sebagai contoh, format WEBP belum didukung oleh Safari, maka Safari akan memuat file JPG sebagai penggantinya.
 
  ## Recap
- Pada dasarnya ada 3 kekurangan yang paling sering dilupakan oleh pengembang atau pemilik website yaitu:
+ Pada dasarnya ada 3 kekurangan yang paling sering dilupakan oleh pengembang atau pemilik situs yaitu:
  1. Gambar yang tidak dimuat hanya pada saat ditampilkan.
  2. Gambar yang ditampilkan tidak memiliki ukuran lebih dari satu sesuai layar sehingga terkadang ukuran gambar lebih besar dari ukuran layar.
  3. Gambar tidak dioptimasi baik untuk ukuran, format, dan kompresi.

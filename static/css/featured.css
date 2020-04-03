@@ -1,0 +1,33 @@
+.featured-block{
+    margin-bottom: 2rem;
+  }
+  .featured-block,.featured-post{
+    height: 200px;
+  }
+  
+  .featured-post{
+    width: 200px;
+    position: relative;
+  }
+  .featured-post img{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+  }
+  .featured-post .overlay{
+    background: linear-gradient(transparent, black);
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .featured-post h4{
+    position: absolute;
+    bottom: 1rem;
+    left:1rem;
+    right:1rem;
+    font-size: 0.9rem;
+    color:#FFF;
+    white-space: pre-wrap;
+  }
