@@ -2,7 +2,7 @@
 title: "Memastikan webmu selalu tersedia"
 author: ""
 date: 2020-04-30T19:18:15+07:00
-draft: true
+draft: false
 description: "Bagaimana memastikan website bisa menerima kunjungan banyak secara optimal."
 subtitle: ""
 tags:
