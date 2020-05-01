@@ -31,3 +31,30 @@
     color:#FFF;
     white-space: pre-wrap;
   }
+
+
+  /* Dark light mode
+-------------------------------------------------- */
+
+.logo img.dark{
+  display: none;
+}
+
+
+body.dark .logo img.dark{
+  display: inline-block;
+}
+
+body.dark .logo img.light{
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo img.dark{
+    display: inline-block;
+  }
+
+  .logo img.light{
+    display: none;
+  }
+}
