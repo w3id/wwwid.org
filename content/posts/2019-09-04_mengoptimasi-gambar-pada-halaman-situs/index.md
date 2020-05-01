@@ -10,12 +10,12 @@ tags:
  - "Progressive Web Apps"
  - "PWA"
  - "Images"
-image : "posts/2019-09-04_mengoptimasi-gambar-pada-halaman-situs/images/image-optimisation-large.jpeg"
+image : "images/image-optimisation-large.jpeg"
 images :
- - "posts/2019-09-04_mengoptimasi-gambar-pada-halaman-situs/images/audit-oversize.png"
- - "posts/2019-09-04_mengoptimasi-gambar-pada-halaman-situs/images/better-format.png"
- - "posts/2019-09-04_mengoptimasi-gambar-pada-halaman-situs/images/image-optimisation-large.jpeg"
- - "posts/2019-09-04_mengoptimasi-gambar-pada-halaman-situs/images/offscreen-audit-2x.png"
+ - "images/audit-oversize.png"
+ - "images/better-format.png"
+ - "images/image-optimisation-large.jpeg"
+ - "images/offscreen-audit-2x.png"
 ---
 
 ## Mengaudit situs yang perlu dioptimasi dengan Lighthouse
