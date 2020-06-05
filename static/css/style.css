@@ -344,6 +344,12 @@
   .post-content dl {
     margin-bottom: var(--content-gap);
   }
+  .post-content ul ul,
+  .post-content ol ol,
+  .post-content ul ol,
+  .post-content ol ul {
+    margin-bottom: 0;
+  }
   .post-content ul,
   .post-content ol {
     padding-left: 20px;
